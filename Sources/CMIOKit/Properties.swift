@@ -680,13 +680,13 @@ public enum ControlProperty: PropertySetInternal {
     /// A `UInt32` that identifies the specific variant of a CMIOControl. This allows the owning CMIOObject
     /// to support controls that are of the same basic class (that is, the values of `kCMIOObjectPropertyClass`
     /// are the same) but may control a part of the object for which the standard controls do not control.
-    /// Value type: `.uint32`
+    /// Value type: `.fourCC`
     case variant
     
     static let descriptors: [ControlProperty: PropertyDescriptor] = [
         .scope: PropertyDescriptor(kCMIOControlPropertyScope, .propertyScope),
         .element: PropertyDescriptor(kCMIOControlPropertyElement, .propertyElement),
-        .variant: PropertyDescriptor(kCMIOControlPropertyVariant, .uint32)
+        .variant: PropertyDescriptor(kCMIOControlPropertyVariant, .fourCC)
     ]
 }
 
