@@ -36,6 +36,19 @@ public struct FeatureControlModel {
     public var maxValue: Float = 0
     public var currentValue: Float = 0
     public var unitName: String?
+    public var exposure: ExposureControlModel?
+}
+
+public struct ExposureControlModel {
+    public var regionOfInterest: CGRect = .null
+    public var lockThreshold: Float = 0
+    public var unlockThreshold: Float = 0
+    public var target: Float = 0
+    public var convergenceSpeed: Float = 0
+    public var stability: Float = 0
+    public var isStable: Bool = false
+    public var integrationTime: Float = 0
+    public var maximumGain: Float = 0
 }
 
 public enum ControlModel {
@@ -128,6 +141,32 @@ public enum Control {
                 model.currentValue = Float(currentValue)
             }
 
+            if classID.isSubclass(of: .exposureControl) {
+                guard
+                    case .rect(let rect) = ExposureControlProperty.regionOfInterest.value(in: controlID),
+                    case .float32(let lock) = ExposureControlProperty.lockThreshold.value(in: controlID),
+                    case .float32(let unlock) = ExposureControlProperty.unlockThreshold.value(in: controlID),
+                    case .float32(let target) = ExposureControlProperty.target.value(in: controlID),
+                    case .float32(let speed) = ExposureControlProperty.convergenceSpeed.value(in: controlID),
+                    case .float32(let stability) = ExposureControlProperty.stability.value(in: controlID),
+                    case .boolean(let isStable) = ExposureControlProperty.stable.value(in: controlID),
+                    case .float32(let time) = ExposureControlProperty.integrationTime.value(in: controlID),
+                    case .float32(let gain) = ExposureControlProperty.maximumGain.value(in: controlID)
+                else {
+                    return nil
+                }
+                
+                model.exposure = ExposureControlModel(regionOfInterest: rect,
+                                                      lockThreshold: lock,
+                                                      unlockThreshold: unlock,
+                                                      target: target,
+                                                      convergenceSpeed: speed,
+                                                      stability: stability,
+                                                      isStable: isStable,
+                                                      integrationTime: time,
+                                                      maximumGain: gain)
+            }
+            
             return .feature(model)
         }
         else {
