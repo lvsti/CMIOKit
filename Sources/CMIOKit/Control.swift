@@ -102,8 +102,7 @@ public enum Control {
             guard
                 case .boolean(let isEnabled) = FeatureControlProperty.onOff.value(in: controlID),
                 case .boolean(let isAutomatic) = FeatureControlProperty.automaticManual.value(in: controlID),
-                case .boolean(let isInAbsoluteUnits) = FeatureControlProperty.absoluteNative.value(in: controlID),
-                case .boolean(let isTuning) = FeatureControlProperty.tune.value(in: controlID)
+                case .boolean(let isInAbsoluteUnits) = FeatureControlProperty.absoluteNative.value(in: controlID)
             else {
                 return nil
             }
@@ -114,7 +113,10 @@ public enum Control {
             model.isEnabled = isEnabled
             model.isAutomatic = isAutomatic
             model.isInAbsoluteUnits = isInAbsoluteUnits
-            model.isTuning = isTuning
+
+            if FeatureControlProperty.tune.exists(in: controlID), case .boolean(let isTuning) = FeatureControlProperty.tune.value(in: controlID) {
+                model.isTuning = isTuning
+            }
             
             if isInAbsoluteUnits {
                 guard
