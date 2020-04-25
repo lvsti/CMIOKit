@@ -40,15 +40,15 @@ public struct FeatureControlModel {
 }
 
 public struct ExposureControlModel {
-    public var regionOfInterest: CGRect = .null
-    public var lockThreshold: Float = 0
-    public var unlockThreshold: Float = 0
-    public var target: Float = 0
-    public var convergenceSpeed: Float = 0
-    public var stability: Float = 0
-    public var isStable: Bool = false
-    public var integrationTime: Float = 0
-    public var maximumGain: Float = 0
+    public var regionOfInterest: CGRect?
+    public var lockThreshold: Float?
+    public var unlockThreshold: Float?
+    public var target: Float?
+    public var convergenceSpeed: Float?
+    public var stability: Float?
+    public var isStable: Bool?
+    public var integrationTime: Float?
+    public var maximumGain: Float?
 }
 
 public enum ControlModel {
@@ -144,29 +144,35 @@ public enum Control {
             }
 
             if classID.isSubclass(of: .exposureControl) {
-                guard
-                    case .rect(let rect) = ExposureControlProperty.regionOfInterest.value(in: controlID),
-                    case .float32(let lock) = ExposureControlProperty.lockThreshold.value(in: controlID),
-                    case .float32(let unlock) = ExposureControlProperty.unlockThreshold.value(in: controlID),
-                    case .float32(let target) = ExposureControlProperty.target.value(in: controlID),
-                    case .float32(let speed) = ExposureControlProperty.convergenceSpeed.value(in: controlID),
-                    case .float32(let stability) = ExposureControlProperty.stability.value(in: controlID),
-                    case .boolean(let isStable) = ExposureControlProperty.stable.value(in: controlID),
-                    case .float32(let time) = ExposureControlProperty.integrationTime.value(in: controlID),
-                    case .float32(let gain) = ExposureControlProperty.maximumGain.value(in: controlID)
-                else {
-                    return nil
-                }
+                model.exposure = ExposureControlModel()
                 
-                model.exposure = ExposureControlModel(regionOfInterest: rect,
-                                                      lockThreshold: lock,
-                                                      unlockThreshold: unlock,
-                                                      target: target,
-                                                      convergenceSpeed: speed,
-                                                      stability: stability,
-                                                      isStable: isStable,
-                                                      integrationTime: time,
-                                                      maximumGain: gain)
+                if case .rect(let rect) = ExposureControlProperty.regionOfInterest.value(in: controlID) {
+                    model.exposure?.regionOfInterest = rect
+                }
+                if case .float32(let lock) = ExposureControlProperty.lockThreshold.value(in: controlID) {
+                    model.exposure?.lockThreshold = lock
+                }
+                if case .float32(let unlock) = ExposureControlProperty.unlockThreshold.value(in: controlID) {
+                    model.exposure?.unlockThreshold = unlock
+                }
+                if case .float32(let target) = ExposureControlProperty.target.value(in: controlID) {
+                    model.exposure?.target = target
+                }
+                if case .float32(let speed) = ExposureControlProperty.convergenceSpeed.value(in: controlID) {
+                    model.exposure?.convergenceSpeed = speed
+                }
+                if case .float32(let stability) = ExposureControlProperty.stability.value(in: controlID) {
+                    model.exposure?.stability = stability
+                }
+                if case .boolean(let isStable) = ExposureControlProperty.stable.value(in: controlID) {
+                    model.exposure?.isStable = isStable
+                }
+                if case .float32(let time) = ExposureControlProperty.integrationTime.value(in: controlID) {
+                    model.exposure?.integrationTime = time
+                }
+                if case .float32(let gain) = ExposureControlProperty.maximumGain.value(in: controlID) {
+                    model.exposure?.maximumGain = gain
+                }
             }
             
             return .feature(model)
