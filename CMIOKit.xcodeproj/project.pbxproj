@@ -3,106 +3,145 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		"CMIOKit::CMIOKitPackageTests::ProductTarget" /* CMIOKitPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_48 /* Build configuration list for PBXAggregateTarget "CMIOKitPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_51 /* PBXTargetDependency */,
+			);
+			name = CMIOKitPackageTests;
+			productName = CMIOKitPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		BEB51D122448CCD800F8C7A4 /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB51D092448CCD700F8C7A4 /* Control.swift */; };
-		BEB51D132448CCD800F8C7A4 /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB51D0A2448CCD700F8C7A4 /* Properties.swift */; };
-		BEB51D142448CCD800F8C7A4 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB51D0B2448CCD700F8C7A4 /* Property.swift */; };
-		BEB51D152448CCD800F8C7A4 /* PropertyListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB51D0C2448CCD800F8C7A4 /* PropertyListener.swift */; };
-		BEB51D162448CCD800F8C7A4 /* Qualifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB51D0D2448CCD800F8C7A4 /* Qualifier.swift */; };
-		BEB51D172448CCD800F8C7A4 /* CMIOKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BEB51D0E2448CCD800F8C7A4 /* CMIOKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BEB51D182448CCD800F8C7A4 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB51D0F2448CCD800F8C7A4 /* Class.swift */; };
-		BEB51D192448CCD800F8C7A4 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB51D102448CCD800F8C7A4 /* Object.swift */; };
+		OBJ_33 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Class.swift */; };
+		OBJ_34 /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Control.swift */; };
+		OBJ_35 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Object.swift */; };
+		OBJ_36 /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Properties.swift */; };
+		OBJ_37 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Property.swift */; };
+		OBJ_38 /* PropertyListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* PropertyListener.swift */; };
+		OBJ_39 /* Qualifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Qualifier.swift */; };
+		OBJ_46 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_60 /* CMIOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CMIOKit::CMIOKit::Product" /* CMIOKit.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7B9B918124EB7A33002A8917 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CMIOKit::CMIOKit";
+			remoteInfo = CMIOKit;
+		};
+		7B9B918224EB7A34002A8917 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CMIOKit::CMIOKitTests";
+			remoteInfo = CMIOKitTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		BEB51CFF2448CCB700F8C7A4 /* CMIOKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CMIOKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEB51D092448CCD700F8C7A4 /* Control.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
-		BEB51D0A2448CCD700F8C7A4 /* Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
-		BEB51D0B2448CCD700F8C7A4 /* Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
-		BEB51D0C2448CCD800F8C7A4 /* PropertyListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyListener.swift; sourceTree = "<group>"; };
-		BEB51D0D2448CCD800F8C7A4 /* Qualifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Qualifier.swift; sourceTree = "<group>"; };
-		BEB51D0E2448CCD800F8C7A4 /* CMIOKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMIOKit.h; sourceTree = "<group>"; };
-		BEB51D0F2448CCD800F8C7A4 /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
-		BEB51D102448CCD800F8C7A4 /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
-		BEB51D112448CCD800F8C7A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		"CMIOKit::CMIOKit::Product" /* CMIOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CMIOKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"CMIOKit::CMIOKitTests::Product" /* CMIOKitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CMIOKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		OBJ_11 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
+		OBJ_12 /* Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
+		OBJ_13 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		OBJ_14 /* Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
+		OBJ_15 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		OBJ_16 /* PropertyListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListener.swift; sourceTree = "<group>"; };
+		OBJ_17 /* Qualifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qualifier.swift; sourceTree = "<group>"; };
+		OBJ_25 /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = docs; sourceTree = SOURCE_ROOT; };
+		OBJ_26 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_27 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* CMIOKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMIOKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BEB51CFC2448CCB700F8C7A4 /* Frameworks */ = {
+		OBJ_40 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_60 /* CMIOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BEB51CAD2448C9C500F8C7A4 = {
+		OBJ_22 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BEB51D072448CCD700F8C7A4 /* Sources */,
-				BEB51CB82448C9C500F8C7A4 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		BEB51CB82448C9C500F8C7A4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BEB51CFF2448CCB700F8C7A4 /* CMIOKit.framework */,
+				"CMIOKit::CMIOKitTests::Product" /* CMIOKitTests.xctest */,
+				"CMIOKit::CMIOKit::Product" /* CMIOKit.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		BEB51D072448CCD700F8C7A4 /* Sources */ = {
+		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
-				BEB51D082448CCD700F8C7A4 /* CMIOKit */,
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_22 /* Products */,
+				OBJ_25 /* docs */,
+				OBJ_26 /* README.md */,
+				OBJ_27 /* LICENSE.txt */,
 			);
-			path = Sources;
+			name = "";
 			sourceTree = "<group>";
 		};
-		BEB51D082448CCD700F8C7A4 /* CMIOKit */ = {
+		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				BEB51D0F2448CCD800F8C7A4 /* Class.swift */,
-				BEB51D0E2448CCD800F8C7A4 /* CMIOKit.h */,
-				BEB51D092448CCD700F8C7A4 /* Control.swift */,
-				BEB51D112448CCD800F8C7A4 /* Info.plist */,
-				BEB51D102448CCD800F8C7A4 /* Object.swift */,
-				BEB51D0A2448CCD700F8C7A4 /* Properties.swift */,
-				BEB51D0B2448CCD700F8C7A4 /* Property.swift */,
-				BEB51D0C2448CCD800F8C7A4 /* PropertyListener.swift */,
-				BEB51D0D2448CCD800F8C7A4 /* Qualifier.swift */,
+				OBJ_8 /* CMIOKit */,
 			);
-			path = CMIOKit;
-			sourceTree = "<group>";
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* CMIOKit */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* CMIOKit.h */,
+				OBJ_10 /* Info.plist */,
+				OBJ_11 /* Class.swift */,
+				OBJ_12 /* Control.swift */,
+				OBJ_13 /* Object.swift */,
+				OBJ_14 /* Properties.swift */,
+				OBJ_15 /* Property.swift */,
+				OBJ_16 /* PropertyListener.swift */,
+				OBJ_17 /* Qualifier.swift */,
+			);
+			name = CMIOKit;
+			path = Sources/CMIOKit;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		BEB51CFA2448CCB700F8C7A4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BEB51D172448CCD800F8C7A4 /* CMIOKit.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		BEB51CFE2448CCB700F8C7A4 /* CMIOKit */ = {
+		"CMIOKit::CMIOKit" /* CMIOKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BEB51D042448CCB700F8C7A4 /* Build configuration list for PBXNativeTarget "CMIOKit" */;
+			buildConfigurationList = OBJ_29 /* Build configuration list for PBXNativeTarget "CMIOKit" */;
 			buildPhases = (
-				BEB51CFA2448CCB700F8C7A4 /* Headers */,
-				BEB51CFB2448CCB700F8C7A4 /* Sources */,
-				BEB51CFC2448CCB700F8C7A4 /* Frameworks */,
-				BEB51CFD2448CCB700F8C7A4 /* Resources */,
+				OBJ_32 /* Sources */,
+				OBJ_40 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -110,256 +149,351 @@
 			);
 			name = CMIOKit;
 			productName = CMIOKit;
-			productReference = BEB51CFF2448CCB700F8C7A4 /* CMIOKit.framework */;
+			productReference = "CMIOKit::CMIOKit::Product" /* CMIOKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"CMIOKit::CMIOKitTests" /* CMIOKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_53 /* Build configuration list for PBXNativeTarget "CMIOKitTests" */;
+			buildPhases = (
+				OBJ_56 /* Sources */,
+				OBJ_59 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_61 /* PBXTargetDependency */,
+			);
+			name = CMIOKitTests;
+			productName = CMIOKitTests;
+			productReference = "CMIOKit::CMIOKitTests::Product" /* CMIOKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"CMIOKit::SwiftPMPackageDescription" /* CMIOKitPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_42 /* Build configuration list for PBXNativeTarget "CMIOKitPackageDescription" */;
+			buildPhases = (
+				OBJ_45 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CMIOKitPackageDescription;
+			productName = CMIOKitPackageDescription;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BEB51CAE2448C9C500F8C7A4 /* Project object */ = {
+		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = "Tamas Lustyik";
-				TargetAttributes = {
-					BEB51CFE2448CCB700F8C7A4 = {
-						CreatedOnToolsVersion = 11.3;
-					};
-				};
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
 			};
-			buildConfigurationList = BEB51CB12448C9C500F8C7A4 /* Build configuration list for PBXProject "CMIOKit" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "CMIOKit" */;
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
-			mainGroup = BEB51CAD2448C9C500F8C7A4;
-			productRefGroup = BEB51CB82448C9C500F8C7A4 /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_22 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BEB51CFE2448CCB700F8C7A4 /* CMIOKit */,
+				"CMIOKit::CMIOKit" /* CMIOKit */,
+				"CMIOKit::SwiftPMPackageDescription" /* CMIOKitPackageDescription */,
+				"CMIOKit::CMIOKitPackageTests::ProductTarget" /* CMIOKitPackageTests */,
+				"CMIOKit::CMIOKitTests" /* CMIOKitTests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		BEB51CFD2448CCB700F8C7A4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
 			files = (
+				OBJ_33 /* Class.swift in Sources */,
+				OBJ_34 /* Control.swift in Sources */,
+				OBJ_35 /* Object.swift in Sources */,
+				OBJ_36 /* Properties.swift in Sources */,
+				OBJ_37 /* Property.swift in Sources */,
+				OBJ_38 /* PropertyListener.swift in Sources */,
+				OBJ_39 /* Qualifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		BEB51CFB2448CCB700F8C7A4 /* Sources */ = {
+		OBJ_45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				BEB51D182448CCD800F8C7A4 /* Class.swift in Sources */,
-				BEB51D152448CCD800F8C7A4 /* PropertyListener.swift in Sources */,
-				BEB51D142448CCD800F8C7A4 /* Property.swift in Sources */,
-				BEB51D192448CCD800F8C7A4 /* Object.swift in Sources */,
-				BEB51D132448CCD800F8C7A4 /* Properties.swift in Sources */,
-				BEB51D162448CCD800F8C7A4 /* Qualifier.swift in Sources */,
-				BEB51D122448CCD800F8C7A4 /* Control.swift in Sources */,
+				OBJ_46 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		OBJ_51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CMIOKit::CMIOKitTests" /* CMIOKitTests */;
+			targetProxy = 7B9B918224EB7A34002A8917 /* PBXContainerItemProxy */;
+		};
+		OBJ_61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CMIOKit::CMIOKit" /* CMIOKit */;
+			targetProxy = 7B9B918124EB7A33002A8917 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		BEB51CBD2448C9C500F8C7A4 /* Debug */ = {
+		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+					"DEBUG=1",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
-		BEB51CBE2448C9C500F8C7A4 /* Release */ = {
+		OBJ_30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CMIOKit.xcodeproj/CMIOKit_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CMIOKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = CMIOKit;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CMIOKit.xcodeproj/CMIOKit_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CMIOKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = CMIOKit;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
-		BEB51D052448CCB700F8C7A4 /* Debug */ = {
+		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/CMIOKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
+					"SWIFT_PACKAGE=1",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.cocoagrinder.CMIOKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		BEB51D062448CCB700F8C7A4 /* Release */ = {
+		OBJ_44 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/CMIOKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.cocoagrinder.CMIOKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CMIOKit.xcodeproj/CMIOKitTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = CMIOKitTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CMIOKit.xcodeproj/CMIOKitTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = CMIOKitTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BEB51CB12448C9C500F8C7A4 /* Build configuration list for PBXProject "CMIOKit" */ = {
+		OBJ_2 /* Build configuration list for PBXProject "CMIOKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BEB51CBD2448C9C500F8C7A4 /* Debug */,
-				BEB51CBE2448C9C500F8C7A4 /* Release */,
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BEB51D042448CCB700F8C7A4 /* Build configuration list for PBXNativeTarget "CMIOKit" */ = {
+		OBJ_29 /* Build configuration list for PBXNativeTarget "CMIOKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BEB51D052448CCB700F8C7A4 /* Debug */,
-				BEB51D062448CCB700F8C7A4 /* Release */,
+				OBJ_30 /* Debug */,
+				OBJ_31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_42 /* Build configuration list for PBXNativeTarget "CMIOKitPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_43 /* Debug */,
+				OBJ_44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_48 /* Build configuration list for PBXAggregateTarget "CMIOKitPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_49 /* Debug */,
+				OBJ_50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_53 /* Build configuration list for PBXNativeTarget "CMIOKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_54 /* Debug */,
+				OBJ_55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BEB51CAE2448C9C500F8C7A4 /* Project object */;
+	rootObject = OBJ_1 /* Project object */;
 }
