@@ -64,14 +64,14 @@ enum CMIOError: Error {
 public enum Control {
     public static func model(for controlID: CMIOObjectID) -> ControlModel? {
         guard
-            case .classID(let classID) = ObjectProperty.class.value(in: controlID),
-            case .string(let name) = ObjectProperty.name.value(in: controlID)
+            case .classID(let classID)? = ObjectProperty.class.value(in: controlID),
+            case .string(let name)? = ObjectProperty.name.value(in: controlID)
         else {
             return nil
         }
         
         if classID.isSubclass(of: .booleanControl) {
-            guard case .boolean(let value) = BooleanControlProperty.value.value(in: controlID) else {
+            guard case .boolean(let value)? = BooleanControlProperty.value.value(in: controlID) else {
                 return nil
             }
             
@@ -79,16 +79,16 @@ public enum Control {
         }
         else if classID.isSubclass(of: .selectorControl) {
             guard
-                case .arrayOfUInt32s(let itemIDs) = SelectorControlProperty.availableItems.value(in: controlID),
+                case .arrayOfUInt32s(let itemIDs)? = SelectorControlProperty.availableItems.value(in: controlID),
                 let items: [(UInt32, String)] = try? itemIDs.map({
-                    guard case .string(let itemName) = SelectorControlProperty.itemName.value(qualifiedBy: Qualifier(from: $0),
+                    guard case .string(let itemName)? = SelectorControlProperty.itemName.value(qualifiedBy: Qualifier(from: $0),
                                                                                               in: controlID)
                     else {
                         throw CMIOError.unknown
                     }
                     return ($0, itemName)
                 }),
-                case .uint32(let currentItemID) = SelectorControlProperty.currentItem.value(in: controlID)
+                case .uint32(let currentItemID)? = SelectorControlProperty.currentItem.value(in: controlID)
             else {
                 return nil
             }
@@ -100,9 +100,9 @@ public enum Control {
         }
         else if classID.isSubclass(of: .featureControl) {
             guard
-                case .boolean(let isEnabled) = FeatureControlProperty.onOff.value(in: controlID),
-                case .boolean(let isAutomatic) = FeatureControlProperty.automaticManual.value(in: controlID),
-                case .boolean(let isInAbsoluteUnits) = FeatureControlProperty.absoluteNative.value(in: controlID)
+                case .boolean(let isEnabled)? = FeatureControlProperty.onOff.value(in: controlID),
+                case .boolean(let isAutomatic)? = FeatureControlProperty.automaticManual.value(in: controlID),
+                case .boolean(let isInAbsoluteUnits)? = FeatureControlProperty.absoluteNative.value(in: controlID)
             else {
                 return nil
             }
@@ -114,15 +114,15 @@ public enum Control {
             model.isAutomatic = isAutomatic
             model.isInAbsoluteUnits = isInAbsoluteUnits
 
-            if FeatureControlProperty.tune.exists(in: controlID), case .boolean(let isTuning) = FeatureControlProperty.tune.value(in: controlID) {
+            if FeatureControlProperty.tune.exists(in: controlID), case .boolean(let isTuning)? = FeatureControlProperty.tune.value(in: controlID) {
                 model.isTuning = isTuning
             }
             
             if isInAbsoluteUnits {
                 guard
-                    case .string(let unitName) = FeatureControlProperty.absoluteUnitName.value(in: controlID),
-                    case .audioValueRange(let range) = FeatureControlProperty.absoluteRange.value(in: controlID),
-                    case .float32(let currentValue) = FeatureControlProperty.absoluteValue.value(in: controlID)
+                    case .string(let unitName)? = FeatureControlProperty.absoluteUnitName.value(in: controlID),
+                    case .audioValueRange(let range)? = FeatureControlProperty.absoluteRange.value(in: controlID),
+                    case .float32(let currentValue)? = FeatureControlProperty.absoluteValue.value(in: controlID)
                 else {
                     return nil
                 }
@@ -133,8 +133,8 @@ public enum Control {
             }
             else {
                 guard
-                    case .audioValueRange(let range) = FeatureControlProperty.nativeRange.value(in: controlID),
-                    case .float32(let currentValue) = FeatureControlProperty.nativeValue.value(in: controlID)
+                    case .audioValueRange(let range)? = FeatureControlProperty.nativeRange.value(in: controlID),
+                    case .float32(let currentValue)? = FeatureControlProperty.nativeValue.value(in: controlID)
                 else {
                     return nil
                 }
@@ -146,31 +146,31 @@ public enum Control {
             if classID.isSubclass(of: .exposureControl) {
                 model.exposure = ExposureControlModel()
                 
-                if case .rect(let rect) = ExposureControlProperty.regionOfInterest.value(in: controlID) {
+                if case .rect(let rect)? = ExposureControlProperty.regionOfInterest.value(in: controlID) {
                     model.exposure?.regionOfInterest = rect
                 }
-                if case .float32(let lock) = ExposureControlProperty.lockThreshold.value(in: controlID) {
+                if case .float32(let lock)? = ExposureControlProperty.lockThreshold.value(in: controlID) {
                     model.exposure?.lockThreshold = lock
                 }
-                if case .float32(let unlock) = ExposureControlProperty.unlockThreshold.value(in: controlID) {
+                if case .float32(let unlock)? = ExposureControlProperty.unlockThreshold.value(in: controlID) {
                     model.exposure?.unlockThreshold = unlock
                 }
-                if case .float32(let target) = ExposureControlProperty.target.value(in: controlID) {
+                if case .float32(let target)? = ExposureControlProperty.target.value(in: controlID) {
                     model.exposure?.target = target
                 }
-                if case .float32(let speed) = ExposureControlProperty.convergenceSpeed.value(in: controlID) {
+                if case .float32(let speed)? = ExposureControlProperty.convergenceSpeed.value(in: controlID) {
                     model.exposure?.convergenceSpeed = speed
                 }
-                if case .float32(let stability) = ExposureControlProperty.stability.value(in: controlID) {
+                if case .float32(let stability)? = ExposureControlProperty.stability.value(in: controlID) {
                     model.exposure?.stability = stability
                 }
-                if case .boolean(let isStable) = ExposureControlProperty.stable.value(in: controlID) {
+                if case .boolean(let isStable)? = ExposureControlProperty.stable.value(in: controlID) {
                     model.exposure?.isStable = isStable
                 }
-                if case .float32(let time) = ExposureControlProperty.integrationTime.value(in: controlID) {
+                if case .float32(let time)? = ExposureControlProperty.integrationTime.value(in: controlID) {
                     model.exposure?.integrationTime = time
                 }
-                if case .float32(let gain) = ExposureControlProperty.maximumGain.value(in: controlID) {
+                if case .float32(let gain)? = ExposureControlProperty.maximumGain.value(in: controlID) {
                     model.exposure?.maximumGain = gain
                 }
             }

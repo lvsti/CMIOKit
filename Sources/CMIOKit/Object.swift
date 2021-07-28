@@ -33,7 +33,7 @@ public struct CMIONode<P: CMIOPropertySource> {
         let children: [CMIOObjectID]
         switch hierarchy {
         case .ownedObjects:
-            guard case .arrayOfObjectIDs(let objectIDs) = ObjectProperty.ownedObjects.value(in: objectID) else {
+            guard case .arrayOfObjectIDs(let objectIDs)? = ObjectProperty.ownedObjects.value(in: objectID) else {
                 children = []
                 break
             }
